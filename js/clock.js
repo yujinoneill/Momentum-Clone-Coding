@@ -10,14 +10,13 @@ function getClock() {
     clock.innerText = `${hours}:${min}:${sec}`;
 };
 
+
 function getToday() {
     const time = new Date();
-    const monthOpt = { month: 'long' };
-    const dayOpt = { weekday: 'long' };
-    const month = Intl.DateTimeFormat('ko-KR', monthOpt).format(time);
-    const day = Intl.DateTimeFormat('ko-KR', dayOpt).format(time);
+    const opt = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+    const day = Intl.DateTimeFormat('ko-KR', opt).format(time);
 
-    today.innerText = `${time.getFullYear()}년 ${month} ${time.getDate()}일 ${day}`;
+    today.innerText = `${day}`;
 };
 
 getClock();
