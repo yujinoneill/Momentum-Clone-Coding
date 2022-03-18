@@ -11,22 +11,37 @@
 </head>
 
 <body>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
     <div id="clock">
         <span></span>
         <span></span>
     </div>
+    <!-- 로그인 전환될 때 애니메이션 넣어서 딜레이 시키기 -->
+    <form id="login">
+        <label>Hello, what's your name?<br>
+            <input type="text" required minlength="4" maxlength="10">
+        </label>
+    </form>
+    <h2 class="hidden"></h2>
     <div id="quote">
         <span></span>
         <span></span>
     </div>
-    <div id="login">
-    </div>
-    <div id="weather"></div>
-    <div id="location"></div>
     <div id="todo"></div>
+    <div id="img">
+        <span></span>
+        <span></span>
+    </div>
 
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/apikey.js"></script>
 </body>
 
 </html>
