@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <form action="https://www.google.com/search" method="get">
+        <input type="search" id="search" name="q" placeholder="Search in Google">
+    </form>
     <div id="weather">
         <span></span>
         <span></span>
@@ -25,15 +28,25 @@
             <input type="text" required minlength="4" maxlength="10">
         </label>
     </form>
-    <h2 class="hidden"></h2>
+    <div id="welcome" class="hidden">
+        <span></span>
+        <button id="welcomeBtn">X</button>
+    </div>
     <div id="quote">
         <span></span>
         <span></span>
     </div>
-    <div id="todo"></div>
     <div id="img">
         <span></span>
         <span></span>
+    </div>
+    <form id="todo">
+        <input type="text" placeholder="What is your main focus?">
+    </form>
+    <div id="focus" class="hidden">
+        <p>TODAY</p>
+        <span></span>
+        <button id="focusBtn">X</button>
     </div>
 
     <script src="js/clock.js"></script>
@@ -42,6 +55,7 @@
     <script src="js/weather.js"></script>
     <script src="js/login.js"></script>
     <script src="js/apikey.js"></script>
+    <script src="js/todo.js"></script>
 </body>
 
 </html>
