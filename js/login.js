@@ -1,28 +1,42 @@
-const login = document.querySelector("form");
-const h2 = document.querySelector("h2");
-const username = document.querySelector("form input");
+const login = document.querySelector("#login");
+const welcome = document.querySelector("#welcome");
+const hello = document.querySelector("#welcome span");
+const username = document.querySelector("#login input");
+const btn = document.querySelector("#welcomeBtn")
+
+const USERNAME = "USERNAME";
+const HIDDEN = "hidden";
 
 function logIn() {
     event.preventDefault();
     const userName = username.value;
-    localStorage.setItem("USERNAME", userName);
-    login.classList.add("hidden");
+    localStorage.setItem(USERNAME, userName);
+    login.classList.add(HIDDEN);
     greeting();
 }
 
 function greeting() {
-    const savedName = localStorage.getItem("USERNAME");
-    h2.innerHTML = `Nice to meet you, ${savedName}!`;
-    h2.classList.remove("hidden");
+    const savedName = localStorage.getItem(USERNAME);
+    hello.innerHTML = `Nice to meet you, ${savedName}!`;
+    welcome.classList.remove(HIDDEN);
 }
 
 login.addEventListener("submit", logIn);
 
-const getName = localStorage.getItem("USERNAME");
+const getName = localStorage.getItem(USERNAME);
 
 if (getName === null) {
-    login.classList.remove("hidden");
+    login.classList.remove(HIDDEN);
 } else {
-    login.classList.add("hidden");
+    login.classList.add(HIDDEN);
     greeting();
 }
+
+function logout() {
+    localStorage.removeItem(USERNAME);
+    welcome.classList.add(HIDDEN);
+    login.classList.remove(HIDDEN);
+    username.value = "";
+}
+
+btn.addEventListener("click", logout);
