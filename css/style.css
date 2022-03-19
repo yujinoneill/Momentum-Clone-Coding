@@ -18,51 +18,39 @@ div {
     display: block;
 }
 
-h2 {
-    font-size: 40px;
+button {
+    background: transparent;
+    border: none;
+    color: white;
+    opacity: 0.85;
+    font-size: 1rem;
+}
+
+p {
+    margin: 0;
 }
 
 .hidden {
     display: none;
 }
 
-#login label {
-    font-size: 40px;
-}
-
-#login input {
-    background-color: transparent;
+#search {
+    position: fixed;
+    margin-top: 0.5em;
+    top: 0.2em;
+    left: 0.5em;
+    background: transparent;
     border: none;
-    font-size: 40px;
-    color: white;
-    text-align: center;
     border-bottom: 1.5px solid white;
+    font-size: 1em;
 }
 
-#login input:focus {
+#search::placeholder {
+    color: white;
+}
+
+#search:focus {
     outline: none;
-}
-
-#quote span:first-child {
-    font-style: italic;
-}
-
-#quote span:last-child {
-    font-size: 12px;
-    opacity: 0.85;
-}
-
-#clock {
-    margin-top: 240px;
-    line-height: 6.5em;
-}
-
-#clock span:first-child {
-    font-size: 140px;
-}
-
-#clock span:last-child {
-    font-size: 30px;
 }
 
 #weather {
@@ -82,13 +70,91 @@ h2 {
     opacity: 0.85;
 }
 
+#clock {
+    margin-top: 240px;
+    line-height: 6.5em;
+}
+
+#clock span:first-child {
+    font-size: 140px;
+}
+
+#clock span:last-child {
+    font-size: 30px;
+    line-height: 2em;
+    margin-top: 0.5em;
+}
+
+#login {
+    font-size: 40px;
+}
+
+#login input, #todo input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-bottom: 1.5px solid white;
+}
+
+#login input {
+    font-size: 40px;
+    text-align: center;
+}
+
+#login input:focus, #todo input:focus {
+    outline: none;
+}
+
+
+#welcome {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 2em;
+}
+
+#welcome span {
+    display: inline;
+}
+
+
+#quote span:first-child {
+    font-style: italic;
+}
+
+#quote span:last-child {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+#todo, #focus {
+    position: fixed;
+    bottom: 0.5em;
+    right: 1em;
+    text-align: right;
+}
+
+#todo input {
+    font-size: 1em;
+}
+
+#todo input::placeholder {
+    color: white;
+}
+
+#focus span {
+    display: inline;
+    font-size: 1.5em;
+}
+
 #img {
     position: fixed;
-    bottom: 0.2em;
+    bottom: 0.5em;
     text-align: left;
+    font-size: 14px;
 }
 
 #img span:last-child {
-    font-size: 10px;
+    font-size: 8px;
     opacity: 0.85;
 }
